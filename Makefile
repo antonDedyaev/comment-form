@@ -2,7 +2,7 @@ install:
 	npm install
 
 deploy:
-	npx gh-pages -d src
+	npx gh-pages -d build
 
 lint:
 	npx stylelint ./src/scss/*.scss --fix
