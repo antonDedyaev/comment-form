@@ -17,7 +17,41 @@
             </div>
         </nav>
     </header>
-    @@include('html/single-comment.html', {})
-        @@include('html/comments.html', {})
+    <section class="comment-single">
+        <div class="form-container">
+            <form action="#" class="comment-form">
+                <h2>Поделитесь своим мнением</h2>
+                <div class="field field-name">
+                    <label for="field-author">Ваше имя:</label>
+                    <input type="text" id="field-author" data-id="author" name="username" placeholder="Представьтесь, пожалуйста..." autofocus>
+                    <span id="author"></span>
+                </div>
+                <div class="field field-calendar">
+                    <label for="field-date">Дата:</label>
+                    <input type="date" id="field-date" name="date" value="" placeholder="Какой сегодня день?">
+                </div>
+                <div class="field field-content">
+                    <label for="field-text">Ваш комментарий:</label>
+                    <textarea name="commentText" id="field-text" data-id="comment" cols="80" rows="6" placeholder="Какие мысли?"></textarea>
+                    <span id="comment"></span>
+                </div>
+                <div class="comment-submit">
+                    <button type="submit" class="comment-form-submit">Разместить комментарий</button>
+                    <span id="form-status"></span>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <section class="comments">
+        <nav class="nav-middle">
+            <div class="nav-middle-header">
+                <h2>Список комментариев</h2>
+            </div>
+        </nav>
+        <div class="comments-wrapper-outer">
+            <div class="comments-wrapper-inner"></div>
+        </div>
+    </section>
 </body>
 </html>
