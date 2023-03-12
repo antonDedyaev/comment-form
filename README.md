@@ -31,5 +31,6 @@ gulp
 
 - Gulp ( + plugins and utilities)
 - Webpack
+- Sass
 - Eslint
 - GitHub Pages
