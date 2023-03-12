@@ -1,0 +1,104 @@
+.nav {
+    &-middle {
+        margin-bottom: 100px;
+
+        background-color: $light;
+        box-shadow: 0 2px 3px 2px $dark;
+
+        &-header {
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+        }
+    }
+}
+
+
+.comments {
+    &-wrapper {
+        &-outer {
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        &-inner {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }  
+}
+
+.comment {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        
+        margin-bottom: 30px;
+        padding: 20px;
+
+        font-family: "Playfair Display", serif;
+
+        text-align: left;;
+
+        background-color: $yellowish-green;
+
+        border-radius: 20px;
+    }
+
+    &-author {
+        padding-left: 7px;
+
+        color: blueviolet;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    &-date {
+        padding-left: 7px;
+
+        color: $dark;
+        font-weight: bold;
+        font-size: 12px;
+        font-style: italic;
+    }
+
+    &-text {
+        margin-top: 15px;
+        padding: 7px;
+
+        color: $dark;
+
+        border-radius: 10px;
+    }
+}
+
+.buttons {
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        i {
+            margin-top: 10px;
+            margin-right: 10px;
+            padding: 7px;
+
+            cursor: pointer;
+        }
+    }
+}
+
+.name {
+    &-icon {
+        margin-top: 15px;
+        margin-right: 15px;
+
+        border-radius: 10px;
+    }
+}
