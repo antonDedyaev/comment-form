@@ -1,6 +1,6 @@
 /* eslint-disable consistent-return */
 import uniqid from 'uniqid';
-import renderCommentsList from './view.js';
+import renderCommentsList from '../view.js';
 
 const app = () => {
   const state = [];

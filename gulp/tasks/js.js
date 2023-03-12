@@ -13,6 +13,7 @@ const js = () => global.app.gulp.src(global.app.path.src.js, { sourcemaps: true 
       filename: 'app.min.js',
     },
   }))
+  .pipe(global.app.plugins.replace(/@img\//g, '../img/'))
   .pipe(global.app.gulp.dest(global.app.path.build.js))
   .pipe(global.app.plugins.browserSync.stream());
 
