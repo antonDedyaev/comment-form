@@ -10,8 +10,8 @@
     &-single {
         display: flex;
         justify-content: center;
-        margin-top: 200px;
-        margin-bottom: 100px;
+        margin-top: 150px;
+        margin-bottom: 50px;
     }
 
     &-form {
@@ -109,3 +109,12 @@
     box-shadow: 0 0 5px 1px red;
 }
 
+@media (max-width: 650px) {
+    .form {
+        &-container {
+            width: auto;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}

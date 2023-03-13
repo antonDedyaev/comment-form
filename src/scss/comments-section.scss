@@ -1,6 +1,6 @@
 .nav {
     &-middle {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
 
         background-color: $light;
         box-shadow: 0 2px 3px 2px $dark;
@@ -100,5 +100,17 @@
         margin-right: 15px;
 
         border-radius: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .comments {
+        &-wrapper {
+            &-outer {
+                width: auto;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
     }
 }

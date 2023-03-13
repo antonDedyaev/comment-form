@@ -1,3 +1,3 @@
-import app from './scripts/controller.js';
+import app from './controller.js';
 
 app();
