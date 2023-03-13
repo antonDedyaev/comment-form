@@ -2,7 +2,6 @@
 import gulp from 'gulp';
 import path from './gulp/config/path.js';
 import plugins from './gulp/config/plugins.js';
-import ghPages from 'gh-pages';
 
 import copy from './gulp/tasks/copy.js';
 import reset from './gulp/tasks/reset.js';
@@ -31,11 +30,3 @@ const mainTasks = gulp.parallel(copy, html, scss, js, images);
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
 gulp.task('default', dev);
-
-const deployToPages = () => ghPages.publish('src', (err) => {
-  if (err) {
-    console.log(err);
-  }
-});
-
-export default deployToPages;

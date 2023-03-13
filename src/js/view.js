@@ -12,8 +12,7 @@ const renderCommentsList = (currentState) => {
     const icon = document.createElement('img');
     icon.className = 'name-icon';
     icon.setAttribute('src', `${alphabet[el.author.slice(0, 1).toLowerCase()]}`);
-    icon.style.height = '50px';
-    icon.style.width = '50px';
+    icon.style = 'height:50px;width:50px';
 
     innerWrapper.append(icon);
     const container = document.createElement('div');
