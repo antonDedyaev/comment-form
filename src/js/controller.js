@@ -3,7 +3,11 @@ import uniqid from 'uniqid';
 import renderCommentsList from './view.js';
 
 const app = () => {
-  const state = [];
+  const persistentState = JSON.parse(localStorage.getItem('persistentState'));
+  const state = persistentState ? [].concat(persistentState) : [];
+  renderCommentsList(state);
+
+  console.log(state);
 
   const commentForm = document.querySelector('.comment-form');
 
@@ -29,6 +33,11 @@ const app = () => {
     const author = document.getElementById('field-author');
     const comment = document.getElementById('field-text');
     const date = document.getElementById('field-date');
+
+    const fullDate = date.value
+      ? new Date(date.value).toISOString()
+      : new Date().toISOString();
+
     if (!author.value || !comment.value) {
       statusMessage.innerHTML = 'Заполните обязательные поля!';
       author.classList.add('invalid');
@@ -41,15 +50,17 @@ const app = () => {
     state.push({
       id: uniqid(),
       author: author.value,
-      date: date.value,
+      date: fullDate,
       text: comment.value,
+      like: null,
     });
+    localStorage.setItem('persistentState', JSON.stringify(state));
+
     author.value = '';
     date.value = '';
     comment.value = '';
 
     renderCommentsList(state);
-    return true;
   };
 
   commentForm.addEventListener('keyup', fieldsEventHandler);
