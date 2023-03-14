@@ -2,6 +2,7 @@
 
 This is an app for leaving comments and look through the list of all posted comments.
 You can add a comment, delete any of the listed comments or give any comment a 'like'.
+The comments are sorted by newest. The state is persistent, since the state data is stored in localStorage.
 
 ## Check the deployed app at:
 
