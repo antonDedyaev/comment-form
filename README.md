@@ -22,7 +22,7 @@ git clone https://github.com/antonDedyaev/comment-form/
 make install
 ```
 
-3. compile and start the app using:
+3. Compile and start the app locally using:
 
 ```sh
 gulp
