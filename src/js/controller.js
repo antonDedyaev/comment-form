@@ -33,7 +33,7 @@ const app = () => {
     const date = document.getElementById('field-date');
 
     const fullDate = date.value
-      ? new Date(`${date.value} ${new Date().toTimeString()}`).toISOString()
+      ? new Date(`${date.value.replaceAll('-', '/')} ${new Date().toTimeString()}`).toISOString()
       : new Date().toISOString();
 
     if (!author.value || !comment.value) {
