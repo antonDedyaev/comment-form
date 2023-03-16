@@ -7,8 +7,6 @@ const app = () => {
   const state = persistentState ? [].concat(persistentState) : [];
   renderCommentsList(state);
 
-  console.log(state);
-
   const commentForm = document.querySelector('.comment-form');
 
   const fieldsEventHandler = (e) => {
@@ -35,7 +33,7 @@ const app = () => {
     const date = document.getElementById('field-date');
 
     const fullDate = date.value
-      ? new Date(date.value).toISOString()
+      ? new Date(`${date.value} ${new Date().toTimeString()}`).toISOString()
       : new Date().toISOString();
 
     if (!author.value || !comment.value) {
